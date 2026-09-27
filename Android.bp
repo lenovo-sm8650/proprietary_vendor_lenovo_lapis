@@ -22553,6 +22553,19 @@ android_app_import {
 }
 
 android_app_import {
+    name: "ZuiNotes",
+    owner: "lenovo",
+    apk: "proprietary/system_ext/priv-app/ZuiNotes/ZuiNotes.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    system_ext_specific: true,
+}
+
+android_app_import {
     name: "ZuiUDevice",
     owner: "lenovo",
     apk: "proprietary/system_ext/priv-app/ZuiUDevice/ZuiUDevice.apk",
