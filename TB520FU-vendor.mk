@@ -1790,6 +1790,7 @@ PRODUCT_PACKAGES += \
     time_daemon \
     ubwcconvert \
     vendor.qti.qspmhal-service \
+    vendor_cmd_tool \
     vmmgr \
     vppservice \
     qccsyshal@1.2-service \

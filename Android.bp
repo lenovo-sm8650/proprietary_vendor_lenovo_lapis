@@ -25254,6 +25254,32 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "vendor_cmd_tool",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/vendor_cmd_tool",
+            ],
+            shared_libs: [
+                "libnl",
+                "libxml2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "vmmgr",
     owner: "lenovo",
     target: {
