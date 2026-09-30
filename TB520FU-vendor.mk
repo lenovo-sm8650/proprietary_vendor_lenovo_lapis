@@ -13,7 +13,6 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB520FU/proprietary/system_ext/etc/init/vendor.qti.qccsyshal_aidl-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.qccsyshal_aidl-service.rc \
     vendor/lenovo/TB520FU/proprietary/system_ext/etc/permissions/com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.dolby.daxservice.xml \
     vendor/lenovo/TB520FU/proprietary/system_ext/etc/permissions/com.qti.qcc.vendor_qcc.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.qti.qcc.vendor_qcc.xml \
-    vendor/lenovo/TB520FU/proprietary/system_ext/etc/permissions/privapp-permissions-com.zui.notes.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.zui.notes.xml \
     vendor/lenovo/TB520FU/proprietary/system_ext/etc/permissions/privapp-permissions-com.zui.udevice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-com.zui.udevice.xml \
     vendor/lenovo/TB520FU/proprietary/system_ext/etc/qspa/qspa_default.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/qspa/qspa_default.rc \
     vendor/lenovo/TB520FU/proprietary/system_ext/etc/sysconfig/hiddenapi-whitelist-com.zui.udevice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/hiddenapi-whitelist-com.zui.udevice.xml \
@@ -1681,7 +1680,6 @@ PRODUCT_PACKAGES += \
     QCC \
     ZuiKeyboardUpdate \
     ZuiKeyboardUpdateOlympia \
-    ZuiNotes \
     ZuiUDevice \
     daxService \
     android.hardware.power-service.xml \
