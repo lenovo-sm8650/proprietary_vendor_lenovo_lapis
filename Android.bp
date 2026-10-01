@@ -22529,27 +22529,18 @@ android_app_import {
     system_ext_specific: true,
 }
 
-android_app_import {
-    name: "ZuiKeyboardUpdate",
-    owner: "lenovo",
-    apk: "proprietary/system_ext/app/ZuiKeyboardUpdate/ZuiKeyboardUpdate.apk",
-    certificate: "platform",
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
+filegroup {
+    name: "ZuiKeyboardUpdate-stock",
+    srcs: [
+        "proprietary/system_ext/app/ZuiKeyboardUpdate/ZuiKeyboardUpdate.apk",
+    ],
 }
 
-android_app_import {
-    name: "ZuiKeyboardUpdateOlympia",
-    owner: "lenovo",
-    apk: "proprietary/system_ext/app/ZuiKeyboardUpdateOlympia/ZuiKeyboardUpdateOlympia.apk",
-    preprocessed: true,
-    presigned: true,
-    dex_preopt: {
-        enabled: false,
-    },
-    system_ext_specific: true,
+filegroup {
+    name: "ZuiKeyboardUpdateOlympia-stock",
+    srcs: [
+        "proprietary/system_ext/app/ZuiKeyboardUpdateOlympia/ZuiKeyboardUpdateOlympia.apk",
+    ],
 }
 
 android_app_import {

@@ -1678,8 +1678,6 @@ PRODUCT_PACKAGES += \
     com.google.android.widevine.nonupdatable \
     TimeService \
     QCC \
-    ZuiKeyboardUpdate \
-    ZuiKeyboardUpdateOlympia \
     ZuiUDevice \
     daxService \
     android.hardware.power-service.xml \
