@@ -631,6 +631,21 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/lapis/proprietary/vendor/etc/sensors/config/sns_transport_ppe.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_transport_ppe.json \
     vendor/lenovo/lapis/proprietary/vendor/etc/sensors/config/sns_wrist_pedo.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_wrist_pedo.json \
     vendor/lenovo/lapis/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_battery_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_battery_0.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_battery_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_battery_1.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_battery_2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_battery_2.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_battery_3.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_battery_3.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_common_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_common_0.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_cpu_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_0.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_cpu_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_1.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_cpu_2.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_2.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_cpu_3.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_3.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_cpu_4.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_cpu_4.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_fan_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_fan_0.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_gpu_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_gpu_0.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_gpu_1.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_gpu_1.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal-engine_sensor_0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine_sensor_0.conf \
+    vendor/lenovo/lapis/proprietary/vendor/etc/thermal_user_case.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_user_case.conf \
     vendor/lenovo/lapis/proprietary/vendor/etc/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
     vendor/lenovo/lapis/proprietary/vendor/firmware/CAMERA_ICP.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.b00 \
     vendor/lenovo/lapis/proprietary/vendor/firmware/CAMERA_ICP.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.b01 \
