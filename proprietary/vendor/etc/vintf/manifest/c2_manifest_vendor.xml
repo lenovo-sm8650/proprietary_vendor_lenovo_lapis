@@ -37,5 +37,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <instance>software</instance>
        </interface>
       <!-- <fqname>@1.0::IComponentStore/default9</fqname> -->
+       <fqname>@1.0::IComponentStore/dolby</fqname>
    </hal>
 </manifest>

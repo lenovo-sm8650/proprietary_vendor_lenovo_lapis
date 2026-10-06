@@ -574,6 +574,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/display/qdcm_calib_data_vtdr6130_amoled_video_mode_dsi_visionox_panel_with_DSC.json:$(TARGET_COPY_OUT_VENDOR)/etc/display/qdcm_calib_data_vtdr6130_amoled_video_mode_dsi_visionox_panel_with_DSC.json \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/display/thermallevel_to_fps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/display/thermallevel_to_fps.xml \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
+    vendor/lenovo/TB520FU/proprietary/vendor/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dolby_vision.cfg \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/eva/facedetection/bias.dat:$(TARGET_COPY_OUT_VENDOR)/etc/eva/facedetection/bias.dat \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/eva/facedetection/weight.dat:$(TARGET_COPY_OUT_VENDOR)/etc/eva/facedetection/weight.dat \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/eva/facelandmark/bias_1_1.dat:$(TARGET_COPY_OUT_VENDOR)/etc/eva/facelandmark/bias_1_1.dat \
@@ -594,6 +595,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/android.hardware.power-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.power-service.rc \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/android.hardware.security.keymint-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service-qti.rc \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/dcfd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dcfd.rc \
+    vendor/lenovo/TB520FU/proprietary/vendor/etc/init/dvs-aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dvs-aidl-service.rc \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/feature_enabler_client.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/feature_enabler_client.rc \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/fingerprint-gf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-gf.rc \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/hexlpservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hexlpservice.rc \
@@ -616,6 +618,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/qwesd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qwesd.rc \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
+    vendor/lenovo/TB520FU/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service-vision.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service-vision.rc \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/vendor.lenovo.hardware.battery-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lenovo.hardware.battery-service.rc \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/vendor.lenovo.hardware.keyboard.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lenovo.hardware.keyboard.rc \
     vendor/lenovo/TB520FU/proprietary/vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lenovo.hardware.touchscreen-service.rc \
@@ -975,6 +978,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.diaghal-V1-ndk \
     btaudio_offload_if \
+    c2.dolby.client \
+    c2.dolby.hevc.dec \
+    c2.dolby.hevc.sec.dec \
+    c2.dolby.store \
     com.qti.eeprom.gt24p128c2csli_imx766 \
     com.qti.eeprom.irs2381c_polar \
     com.qti.eeprom.truly_cmb433 \
@@ -1263,6 +1270,9 @@ PRODUCT_PACKAGES += \
     libdlbdsservice \
     libdlbpreg \
     libdmshal \
+    libdolbydecoderprocessor \
+    libdolbyeglcore \
+    libdolbyottcameracontrol \
     libdpp_manager \
     libdpps \
     libdrmfs \
@@ -1588,6 +1598,7 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.4 \
     vendor.display.color@1.5 \
     vendor.display.postproc@1.0 \
+    vendor.dolby.dvs-V1-ndk \
     vendor.dolby.hardware.dms@2.0 \
     vendor.lenovo.hardware.battery-V4-ndk \
     vendor.lenovo.hardware.keyboard-V2-ndk_platform \
@@ -1677,6 +1688,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.qccvndhal_aidl-V1-ndk \
     com.google.android.widevine.nonupdatable \
     TimeService \
+    DolbyVisionService \
     QCC \
     ZuiUDevice \
     daxService \
@@ -1684,6 +1696,7 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-service-qti.xml \
     bttpi-saidl.xml \
     c2_manifest_vendor.xml \
+    dvs-aidl-service.xml \
     fingerprint-example.xml \
     manifest_identity_credential.xml \
     qesdk-manager.xml \
@@ -1728,9 +1741,11 @@ PRODUCT_PACKAGES += \
     android.hardware.identity-service-qti \
     android.hardware.power-service \
     android.hardware.security.keymint-service-qti \
+    dvs-aidl-service \
     pasrknob \
     qconfigservice \
     vendor.dolby.hardware.dms@2.0-service \
+    vendor.dolby.media.c2@1.0-service-vision \
     vendor.lenovo.hardware.battery-service \
     vendor.lenovo.hardware.keyboard-service \
     vendor.lenovo.hardware.touchscreen-service \
