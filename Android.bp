@@ -10792,6 +10792,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.lenovo.hardware.display-V3-ndk",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.lenovo.hardware.display-V3-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.lenovo.hardware.keyboard-V2-ndk_platform",
     owner: "lenovo",
     strip: {
@@ -11062,6 +11087,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "vendor.lenovo.hardware.display-service.xml",
+    owner: "lenovo",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.lenovo.hardware.display-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "vendor.lenovo.hardware.keyboard.xml",
     owner: "lenovo",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.lenovo.hardware.keyboard.xml",
@@ -11296,6 +11330,38 @@ cc_prebuilt_binary {
                 "liblog",
                 "libutils",
                 "vendor.lenovo.hardware.battery-V4-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.lenovo.hardware.display-service",
+    owner: "lenovo",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.lenovo.hardware.display-service",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libbase",
+                "libutils",
+                "libhardware",
+                "libbinder_ndk",
+                "vendor.lenovo.hardware.display-V3-ndk",
                 "libc++",
                 "libc",
                 "libm",
