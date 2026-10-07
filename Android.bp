@@ -15,6 +15,43 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "android.hardware.media.c2@1.0-v34",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/android.hardware.media.c2@1.0-v34.so",
+            ],
+            shared_libs: [
+                "android.hardware.graphics.bufferqueue@1.0",
+                "android.hardware.graphics.bufferqueue@2.0",
+                "android.hardware.graphics.common@1.0",
+                "android.hardware.graphics.common@1.1",
+                "android.hardware.graphics.common@1.2",
+                "android.hardware.media.bufferpool@2.0",
+                "android.hardware.media.omx@1.0",
+                "android.hardware.media@1.0",
+                "android.hidl.safe_union@1.0",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "c2.dolby.client",
     owner: "lenovo",
     strip: {
@@ -26,17 +63,16 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/c2.dolby.client.so",
             ],
             shared_libs: [
-                "libcodec2_hidl_shim",
                 "libbase",
                 "liblog",
-                "libcodec2",
-                "libcodec2_vndk",
+                "libcodec2-v34",
+                "libcodec2_vndk-v34",
                 "libutils",
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
+                "android.hardware.media.c2@1.0-v34",
+                "libcodec2_hidl@1.0-v34",
                 "libhidlbase",
                 "libcutils",
-                "libstagefright_bufferpool@2.0.1",
+                "libstagefright_bufferpool@2.0.1-v34",
                 "libc++",
                 "libc",
                 "libm",
@@ -61,25 +97,24 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/c2.dolby.hevc.dec.so",
             ],
             shared_libs: [
-                "libcodec2_shim",
                 "vendor.dolby.dvs-V1-ndk",
                 "libbinder_ndk",
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
-                "libcodec2_soft_common",
+                "android.hardware.media.c2@1.0-v34",
+                "libcodec2_hidl@1.0-v34",
+                "libcodec2_soft_common-v34",
                 "libcutils",
-                "libsfplugin_ccodec_utils",
+                "libsfplugin_ccodec_utils-v34",
                 "libstagefright_foundation",
                 "libbase",
                 "liblog",
-                "libcodec2",
-                "libcodec2_vndk",
+                "libcodec2-v34",
+                "libcodec2_vndk-v34",
                 "libutils",
                 "libEGL",
                 "libGLESv3",
                 "c2.dolby.store",
                 "c2.dolby.client",
-                "libstagefright_bufferpool@2.0.1",
+                "libstagefright_bufferpool@2.0.1-v34",
                 "libdolbydecoderprocessor",
                 "libui",
                 "libhidlbase",
@@ -107,25 +142,24 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/c2.dolby.hevc.sec.dec.so",
             ],
             shared_libs: [
-                "libcodec2_shim",
                 "vendor.dolby.dvs-V1-ndk",
                 "libbinder_ndk",
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
-                "libcodec2_soft_common",
+                "android.hardware.media.c2@1.0-v34",
+                "libcodec2_hidl@1.0-v34",
+                "libcodec2_soft_common-v34",
                 "libcutils",
-                "libsfplugin_ccodec_utils",
+                "libsfplugin_ccodec_utils-v34",
                 "libstagefright_foundation",
                 "libbase",
                 "liblog",
-                "libcodec2",
-                "libcodec2_vndk",
+                "libcodec2-v34",
+                "libcodec2_vndk-v34",
                 "libutils",
                 "libEGL",
                 "libGLESv3",
                 "c2.dolby.store",
                 "c2.dolby.client",
-                "libstagefright_bufferpool@2.0.1",
+                "libstagefright_bufferpool@2.0.1-v34",
                 "libdolbydecoderprocessor",
                 "libui",
                 "libhidlbase",
@@ -154,11 +188,11 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbase",
-                "libcodec2",
-                "libcodec2_vndk",
+                "libcodec2-v34",
+                "libcodec2_vndk-v34",
                 "libutils",
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
+                "android.hardware.media.c2@1.0-v34",
+                "libcodec2_hidl@1.0-v34",
                 "liblog",
                 "libcutils",
                 "libdmabufheap",
@@ -7911,6 +7945,178 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libcodec2-v34",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcodec2-v34.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_hidl@1.0-v34",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcodec2_hidl@1.0-v34.so",
+            ],
+            shared_libs: [
+                "android.hardware.graphics.bufferqueue@1.0",
+                "android.hardware.graphics.bufferqueue@2.0",
+                "android.hardware.graphics.common@1.0",
+                "android.hardware.media@1.0",
+                "android.hardware.media.bufferpool@2.0",
+                "android.hardware.media.c2@1.0-v34",
+                "android.hardware.media.omx@1.0",
+                "libbase",
+                "libcodec2-v34",
+                "libcodec2_vndk-v34",
+                "libcutils",
+                "libhidlbase",
+                "liblog",
+                "libstagefright_bufferpool@2.0.1-v34",
+                "libui",
+                "libutils",
+                "libstagefright_bufferqueue_helper-v34",
+                "libcodec2_hidl_plugin-v34",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_hidl_plugin-v34",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcodec2_hidl_plugin-v34.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcodec2-v34",
+                "libcodec2_vndk-v34",
+                "liblog",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_soft_common-v34",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcodec2_soft_common-v34.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcodec2-v34",
+                "libcodec2_vndk-v34",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libsfplugin_ccodec_utils-v34",
+                "libstagefright_foundation",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_vndk-v34",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcodec2_vndk-v34.so",
+            ],
+            shared_libs: [
+                "android.hardware.graphics.bufferqueue@2.0",
+                "android.hardware.graphics.common@1.2",
+                "android.hardware.common-V2-ndk",
+                "android.hardware.common.fmq-V1-ndk",
+                "android.hardware.media.bufferpool@2.0",
+                "android.hardware.media.bufferpool2-V1-ndk",
+                "libbase",
+                "libbinder_ndk",
+                "libcutils",
+                "libdmabufheap",
+                "libfmq",
+                "libgralloctypes",
+                "libhidlbase",
+                "libion",
+                "liblog",
+                "libnativewindow",
+                "libstagefright_foundation",
+                "libstagefright_bufferpool@2.0.1-v34",
+                "libstagefright_aidl_bufferpool2-v34",
+                "libui",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcom.qti.chinodeutils",
     owner: "lenovo",
     strip: {
@@ -8142,10 +8348,10 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libbase",
-                "libcodec2",
-                "libcodec2_vndk",
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
+                "libcodec2-v34",
+                "libcodec2_vndk-v34",
+                "android.hardware.media.c2@1.0-v34",
+                "libcodec2_hidl@1.0-v34",
                 "liblog",
                 "libEGL",
                 "libGLESv2",
@@ -10054,6 +10260,38 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libsfplugin_ccodec_utils-v34",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsfplugin_ccodec_utils-v34.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcodec2-v34",
+                "libcodec2_vndk-v34",
+                "libcutils",
+                "liblog",
+                "libnativewindow",
+                "libstagefright_foundation",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libsgutils2",
     owner: "lenovo",
     strip: {
@@ -10093,6 +10331,104 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libm",
                 "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_aidl_bufferpool2-v34",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libstagefright_aidl_bufferpool2-v34.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libcutils",
+                "libfmq",
+                "liblog",
+                "libutils",
+                "android.hardware.media.bufferpool2-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_bufferpool@2.0.1-v34",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libstagefright_bufferpool@2.0.1-v34.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libfmq",
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "android.hardware.media.bufferpool@2.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_bufferqueue_helper-v34",
+    owner: "lenovo",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libstagefright_bufferqueue_helper-v34.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "libhidlbase",
+                "libhidlmemory",
+                "liblog",
+                "libstagefright_foundation",
+                "libui",
+                "libutils",
+                "android.hardware.graphics.bufferqueue@1.0",
+                "android.hardware.graphics.bufferqueue@2.0",
+                "android.hidl.token@1.0-utils",
+                "libEGL",
+                "libnativewindow",
+                "libvndksupport",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -10919,11 +11255,11 @@ cc_prebuilt_binary {
             shared_libs: [
                 "libbase",
                 "liblog",
-                "libcodec2",
-                "libcodec2_vndk",
+                "libcodec2-v34",
+                "libcodec2_vndk-v34",
                 "libutils",
-                "android.hardware.media.c2@1.0",
-                "libcodec2_hidl@1.0",
+                "android.hardware.media.c2@1.0-v34",
+                "libcodec2_hidl@1.0-v34",
                 "libbinder",
                 "libhidlbase",
                 "c2.dolby.store",

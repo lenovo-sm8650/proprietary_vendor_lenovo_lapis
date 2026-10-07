@@ -705,6 +705,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/lapis/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin
 
 PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0-v34 \
     c2.dolby.client \
     c2.dolby.hevc.dec \
     c2.dolby.hevc.sec.dec \
@@ -904,6 +905,11 @@ PRODUCT_PACKAGES += \
     libcamxtintlessalgo \
     libchifeature2 \
     libchilog \
+    libcodec2-v34 \
+    libcodec2_hidl@1.0-v34 \
+    libcodec2_hidl_plugin-v34 \
+    libcodec2_soft_common-v34 \
+    libcodec2_vndk-v34 \
     libcom.qti.chinodeutils \
     libcommonchiutils \
     libdapparamstorage \
@@ -970,8 +976,12 @@ PRODUCT_PACKAGES += \
     libqsegnet \
     libqshcamera \
     libsfeShiftExtrapolation \
+    libsfplugin_ccodec_utils-v34 \
     libsgutils2 \
     libspectre \
+    libstagefright_aidl_bufferpool2-v34 \
+    libstagefright_bufferpool@2.0.1-v34 \
+    libstagefright_bufferqueue_helper-v34 \
     libswregistrationalgo \
     libtfestriping \
     libubifocus \
