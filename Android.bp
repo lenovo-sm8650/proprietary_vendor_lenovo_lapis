@@ -8083,6 +8083,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_vndk-v34.so",
             ],
             shared_libs: [
+                "libui_shim",
                 "android.hardware.graphics.bufferqueue@2.0",
                 "android.hardware.graphics.common@1.2",
                 "android.hardware.common-V2-ndk",
