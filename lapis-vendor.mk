@@ -517,7 +517,9 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/fingerprint-gf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-gf.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service-vision.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service-vision.rc \
+    vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.lenovo.hardware.battery-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lenovo.hardware.battery-service.rc \
+    vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.lenovo.hardware.display-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lenovo.hardware.display-service.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.lenovo.hardware.keyboard.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lenovo.hardware.keyboard.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.lenovo.hardware.touchscreen-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lenovo.hardware.touchscreen-service.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.qti.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.camera.provider-service_64.rc \
@@ -705,6 +707,9 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/lapis/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin
 
 PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0-v34 \
+    android.hardware.media.c2@1.1-v34 \
+    android.hardware.media.c2@1.2-v34 \
     c2.dolby.client \
     c2.dolby.hevc.dec \
     c2.dolby.hevc.sec.dec \
@@ -904,9 +909,20 @@ PRODUCT_PACKAGES += \
     libcamxtintlessalgo \
     libchifeature2 \
     libchilog \
+    libcodec2-v34 \
+    libcodec2_hidl@1.0-v34 \
+    libcodec2_hidl@1.1-v34 \
+    libcodec2_hidl@1.2-v34 \
+    libcodec2_hidl_plugin-v34 \
+    libcodec2_soft_ac4dec \
+    libcodec2_soft_common-v34 \
+    libcodec2_soft_ddpdec \
+    libcodec2_store_dolby \
+    libcodec2_vndk-v34 \
     libcom.qti.chinodeutils \
     libcommonchiutils \
     libdapparamstorage \
+    libdeccfg \
     libdepthcomputation \
     libdlbdsservice \
     libdlbpreg \
@@ -970,8 +986,13 @@ PRODUCT_PACKAGES += \
     libqsegnet \
     libqshcamera \
     libsfeShiftExtrapolation \
+    libsfplugin_ccodec_utils-v34 \
     libsgutils2 \
     libspectre \
+    libstagefright_aidl_bufferpool2-v34 \
+    libstagefright_bufferpool@2.0.1-v34 \
+    libstagefright_bufferqueue_helper-v34 \
+    libstagefright_foundation-v34 \
     libswregistrationalgo \
     libtfestriping \
     libubifocus \
@@ -983,6 +1004,7 @@ PRODUCT_PACKAGES += \
     vendor.dolby.dvs-V1-ndk \
     vendor.dolby.hardware.dms@2.0 \
     vendor.lenovo.hardware.battery-V4-ndk \
+    vendor.lenovo.hardware.display-V3-ndk \
     vendor.lenovo.hardware.keyboard-V2-ndk_platform \
     vendor.lenovo.hardware.touchscreen-V2-ndk \
     vendor.qti.hardware.camera.aon-service-impl \
@@ -994,7 +1016,9 @@ PRODUCT_PACKAGES += \
     dvs-aidl-service.xml \
     fingerprint-example.xml \
     vendor.dolby.hardware.dms.xml \
+    vendor.dolby.media.c2@1.0-service.xml \
     vendor.lenovo.hardware.battery-service.xml \
+    vendor.lenovo.hardware.display-service.xml \
     vendor.lenovo.hardware.keyboard.xml \
     vendor.lenovo.hardware.touchscreen-service.xml \
     vendor.qti.camera.aon-impl.xml \
@@ -1006,8 +1030,10 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.gf \
     dvs-aidl-service \
     vendor.dolby.hardware.dms@2.0-service \
+    vendor.dolby.media.c2-default-service-dax \
     vendor.dolby.media.c2@1.0-service-vision \
     vendor.lenovo.hardware.battery-service \
+    vendor.lenovo.hardware.display-service \
     vendor.lenovo.hardware.keyboard-service \
     vendor.lenovo.hardware.touchscreen-service \
     vendor.qti.camera.provider-service_64 \
