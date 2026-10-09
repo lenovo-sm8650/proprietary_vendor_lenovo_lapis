@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/lenovo/lapis
 
 PRODUCT_COPY_FILES += \
+    vendor/lenovo/lapis/proprietary/system/etc/pen/pen_config.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/pen/pen_config.xml \
     vendor/lenovo/lapis/proprietary/system_ext/etc/default-permissions/default-permissions-com.zui.udevice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/default-permissions/default-permissions-com.zui.udevice.xml \
     vendor/lenovo/lapis/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
     vendor/lenovo/lapis/proprietary/system_ext/etc/permissions/com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.dolby.daxservice.xml \
@@ -13,6 +14,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/lapis/proprietary/system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
     vendor/lenovo/lapis/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
     vendor/lenovo/lapis/proprietary/system_ext/etc/sysconfig/hiddenapi-whitelist-com.zui.udevice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/hiddenapi-whitelist-com.zui.udevice.xml \
+    vendor/lenovo/lapis/proprietary/system_ext/etc/sysconfig/initial-stopped-states-com.lenovo.penservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/initial-stopped-states-com.lenovo.penservice.xml \
     vendor/lenovo/lapis/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
     vendor/lenovo/lapis/proprietary/vendor/etc/Hapticsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/Hapticsconfig.xml \
     vendor/lenovo/lapis/proprietary/vendor/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/IDP_UPD/IDP_UPD_acdb_cal.acdb \
