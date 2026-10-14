@@ -54,9 +54,9 @@
 
     <settings_default_values>
         <!-- Quick Note -->
-        <settings_default_value name="pen_set_quick_create_click_notes">1</settings_default_value>
+        <settings_default_value name="pen_set_quick_create_click_notes">0</settings_default_value>
         <!-- Screen Off Note -->
-        <settings_default_value name="pen_set_quick_create_screenoff_notes">1</settings_default_value>
+        <settings_default_value name="pen_set_quick_create_screenoff_notes">0</settings_default_value>
         <!-- Free Write -->
         <settings_default_value name="pen_set_freewrite_on">0</settings_default_value>
         <!-- Dynamic Palm Rejection -->
