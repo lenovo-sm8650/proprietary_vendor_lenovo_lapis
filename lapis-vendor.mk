@@ -524,7 +524,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/dvs-aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dvs-aidl-service.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/fingerprint-gf.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fingerprint-gf.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
-    vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service-vision.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service-vision.rc \
+    vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.dolby.media.c2-service-vision.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2-service-vision.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.lenovo.hardware.battery-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lenovo.hardware.battery-service.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.lenovo.hardware.display-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.lenovo.hardware.display-service.rc \
@@ -533,6 +533,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.qti.camera.provider-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.camera.provider-service_64.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/vendor.qti.hardware.lights.service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.lights.service.rc \
     vendor/lenovo/lapis/proprietary/vendor/etc/init/wfdvndservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wfdvndservice.rc \
+    vendor/lenovo/lapis/proprietary/vendor/etc/media_codecs_dolby_vision_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_vision_vendor.xml \
     vendor/lenovo/lapis/proprietary/vendor/etc/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
     vendor/lenovo/lapis/proprietary/vendor/etc/seccomp_policy/wfdhdcphalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdhdcphalservice.policy \
     vendor/lenovo/lapis/proprietary/vendor/etc/seccomp_policy/wfdvndservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdvndservice.policy \
@@ -724,9 +725,9 @@ PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.1-v34 \
     android.hardware.media.c2@1.2-v34 \
     c2.dolby.client \
-    c2.dolby.hevc.dec \
-    c2.dolby.hevc.sec.dec \
     c2.dolby.store \
+    c2.dolby.vision.dec \
+    c2.dolby.vision.sec.dec \
     com.qti.eeprom.gt24p128c2csli_imx766 \
     com.qti.eeprom.irs2381c_polar \
     com.qti.eeprom.truly_cmb433 \
@@ -945,6 +946,8 @@ PRODUCT_PACKAGES += \
     libdolbydecoderprocessor \
     libdolbyeglcore \
     libdolbyottcameracontrol \
+    libdolbyproxyandroid \
+    libdolbyui \
     libeepromcutter \
     libfeutils \
     libgf_ca \
@@ -1039,7 +1042,6 @@ PRODUCT_PACKAGES += \
     libdlbvol \
     libswdap \
     libswgamedap \
-    vendor.dolby.dvs-V1-ndk \
     vendor.dolby.hardware.dms@2.0 \
     vendor.lenovo.hardware.battery-V4-ndk \
     vendor.lenovo.hardware.display-V3-ndk \
@@ -1061,6 +1063,7 @@ PRODUCT_PACKAGES += \
     libwfdmmsink \
     libwfdmmsrc_system \
     libwfdnative \
+    libwfdparserlite \
     libwfdrtsp \
     libwfdservice \
     libwfdsinksm \
@@ -1070,7 +1073,7 @@ PRODUCT_PACKAGES += \
     libwfduibcsrc \
     libwfduibcsrcinterface \
     vendor.qti.hardware.wifidisplaysession@1.0 \
-    vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk \
+    vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk \
     WfdService \
     ZuiUDevice \
     daxService \
@@ -1079,6 +1082,7 @@ PRODUCT_PACKAGES += \
     dvs-aidl-service.xml \
     fingerprint-example.xml \
     vendor.dolby.hardware.dms.xml \
+    vendor.dolby.media.c2-service-vision_hidl.xml \
     vendor.dolby.media.c2@1.0-service.xml \
     vendor.lenovo.hardware.battery-service.xml \
     vendor.lenovo.hardware.display-service.xml \
@@ -1095,7 +1099,7 @@ PRODUCT_PACKAGES += \
     dvs-aidl-service \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.dolby.media.c2-default-service-dax \
-    vendor.dolby.media.c2@1.0-service-vision \
+    vendor.dolby.media.c2-service-vision \
     vendor.lenovo.hardware.battery-service \
     vendor.lenovo.hardware.display-service \
     vendor.lenovo.hardware.keyboard-service \

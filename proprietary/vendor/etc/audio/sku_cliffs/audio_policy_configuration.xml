@@ -437,8 +437,10 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <routes>
                 <!--  <route type="mix" sink="Earpiece"
                        sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output,Telephony Rx"/> -->
+                <!-- Fix LAPISX-1718 by zhangky9 20260825 start -->
                 <route type="mix" sink="Speaker"
-                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output,Telephony Rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,haptics output,Telephony Rx"/>
+                <!-- Fix LAPISX-1718 by zhangky9 20260825 end -->
                 <route type="mix" sink="Wired Headset"
                        sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output,Telephony Rx"/>
                 <route type="mix" sink="Wired Headphones"
@@ -548,7 +550,10 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
         <xi:include href="/vendor/etc/r_submix_audio_policy_configuration.xml"/>
 
         <!-- Bluetooth Audio HAL for hearing aid -->
+        <!--
         <xi:include href="/vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml"/>
+        -->
+        <xi:include href="/vendor/etc/bluetooth_qti_audio_policy_configuration.xml"/>
 
     </modules>
     <!-- End of Modules section -->
