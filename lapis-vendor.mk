@@ -75,6 +75,7 @@ PRODUCT_COPY_FILES += \
     vendor/lenovo/lapis/proprietary/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     vendor/lenovo/lapis/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     vendor/lenovo/lapis/proprietary/vendor/etc/backend_conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/backend_conf.xml \
+    vendor/lenovo/lapis/proprietary/vendor/etc/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml \
     vendor/lenovo/lapis/proprietary/vendor/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml \
     vendor/lenovo/lapis/proprietary/vendor/etc/camera/camxoverridesettings.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camxoverridesettings.txt \
     vendor/lenovo/lapis/proprietary/vendor/etc/camera/pandora/AlgorithmDevelopmentTesterResources/AutoFraming/haarcascade_frontalface_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/pandora/AlgorithmDevelopmentTesterResources/AutoFraming/haarcascade_frontalface_default.xml \
